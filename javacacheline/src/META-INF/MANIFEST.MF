@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: lykos.study.com.JOLSample_02_Alignment
+
