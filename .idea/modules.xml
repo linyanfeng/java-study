@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/java-study.iml" filepath="$PROJECT_DIR$/.idea/java-study.iml" />
       <module fileurl="file://$PROJECT_DIR$/javacacheline/javacacheline.iml" filepath="$PROJECT_DIR$/javacacheline/javacacheline.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaclassloader/javaclassloader.iml" filepath="$PROJECT_DIR$/javaclassloader/javaclassloader.iml" />
     </modules>
   </component>
 </project>
