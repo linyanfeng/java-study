@@ -6,13 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="javacacheline" />
-        <module name="javaclassloader" />
+        <module name="clhlock" />
+        <module name="demo" />
+        <module name="java-cache-line" />
+        <module name="java-class-loader" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="javacacheline" target="1.5" />
-      <module name="javaclassloader" target="1.5" />
+      <module name="clhlock" target="1.5" />
+      <module name="demo" target="1.8" />
+      <module name="java-cache-line" target="1.5" />
+      <module name="java-class-loader" target="1.5" />
+      <module name="java-study" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
