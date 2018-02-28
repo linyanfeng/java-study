@@ -8,11 +8,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="javacacheline" />
         <module name="javaclassloader" />
+        <module name="sandbox" />
+        <module name="sandboxfix" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="java-study" target="1.5" />
       <module name="javacacheline" target="1.5" />
       <module name="javaclassloader" target="1.5" />
+      <module name="sandbox" target="1.5" />
+      <module name="sandboxfix" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
