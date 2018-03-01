@@ -10,6 +10,19 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>clhlock</module>
+        <module>sandbox</module>
     </modules>
 
+    <repositories>
+        <repository>
+            <id>internal-repo</id>
+            <url>http://artifactory.yxapp.xyz/artifactory/mvn-public/</url>
+            <snapshots>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+            <releases>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+        </repository>
+    </repositories>
 </project>
