@@ -7,19 +7,22 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="clhlock" />
-        <module name="demo" />
+        <module name="instrumentation" />
         <module name="java-cache-line" />
         <module name="java-class-loader" />
         <module name="sandbox" />
+        <module name="sandbox-fix" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="clhlock" target="1.5" />
       <module name="demo" target="1.8" />
+      <module name="instrumentation" target="1.7" />
       <module name="java-cache-line" target="1.5" />
       <module name="java-class-loader" target="1.5" />
       <module name="java-study" target="1.5" />
       <module name="sandbox" target="1.5" />
+      <module name="sandbox-fix" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -12,3 +12,19 @@ java for object, threat...
 ### classload
   **wiki**
   * http://blog.csdn.net/sunxianghuang/article/details/52093189
+### intrumentation
+ * 使用：
+  ```$xslt
+    mvn clean package
+    java -javaagent:/Users/lykos/IdeaProjects/personalProject/java-study/instrumentation/target/instrumentation-1.0-SNAPSHOT-jar-with-dependencies.jar  lykos.study.com.instrument.SampleApp
+
+```
+  可以看到成功代理
+  ```$xslt
+Adding a SampleTransformer instance to the JVM.
+Transforming lykos/study/com/instrument/SampleApp
+java.util.concurrent.TimeUnit.sleep:3004
+Hello World!
+java.io.PrintStream.println:0
+lykos.study.com.instrument.SampleApp.test:3006
+```

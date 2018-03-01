@@ -3,11 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/clhlock/clhlock.iml" filepath="$PROJECT_DIR$/clhlock/clhlock.iml" />
-      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/instrumentation/instrumentation.iml" filepath="$PROJECT_DIR$/instrumentation/instrumentation.iml" />
       <module fileurl="file://$PROJECT_DIR$/javacacheline/java-cache-line.iml" filepath="$PROJECT_DIR$/javacacheline/java-cache-line.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaclassloader/java-class-loader.iml" filepath="$PROJECT_DIR$/javaclassloader/java-class-loader.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-study.iml" filepath="$PROJECT_DIR$/java-study.iml" />
       <module fileurl="file://$PROJECT_DIR$/sandbox/sandbox.iml" filepath="$PROJECT_DIR$/sandbox/sandbox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sandboxfix/sandbox-fix.iml" filepath="$PROJECT_DIR$/sandboxfix/sandbox-fix.iml" />
     </modules>
   </component>
 </project>
