@@ -1,4 +1,4 @@
-package lykos.sandbox.study.com;
+package sandbox.lykos.study.com;
 
 /**
  * @author lykoy

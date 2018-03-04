@@ -9,6 +9,7 @@ public class SampleApp {
     public static void main(String[] args) {
         new SampleApp().test();
     }
+
     public void test() {
 
         try {
@@ -18,4 +19,5 @@ public class SampleApp {
         }
         System.out.println("Hello World!");
     }
+
 }

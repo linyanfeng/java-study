@@ -7,7 +7,6 @@
       <module fileurl="file://$PROJECT_DIR$/javacacheline/java-cache-line.iml" filepath="$PROJECT_DIR$/javacacheline/java-cache-line.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaclassloader/java-class-loader.iml" filepath="$PROJECT_DIR$/javaclassloader/java-class-loader.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-study.iml" filepath="$PROJECT_DIR$/java-study.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sandbox/sandbox.iml" filepath="$PROJECT_DIR$/sandbox/sandbox.iml" />
       <module fileurl="file://$PROJECT_DIR$/sandboxfix/sandbox-fix.iml" filepath="$PROJECT_DIR$/sandboxfix/sandbox-fix.iml" />
     </modules>
   </component>

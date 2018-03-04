@@ -16,14 +16,14 @@ import javax.annotation.Resource;
  * @create 2018/2/28 下午11:30
  */
 @Information(id = "broken-clock-tinker")
-public class SandboxfixTest implements Module{
+public class SandboxBrokenClockModule implements Module{
     @Resource
     private ModuleEventWatcher moduleEventWatcher;
 
     @Http("/repairCheckState")
     public void repairCheckState() {
         moduleEventWatcher.watch(
-                new NameRegexFilter("BrokenClocker", "checkState"),
+                new NameRegexFilter(".*BrokenClock", "checkState"),
                 new EventListener() {
                     public void onEvent(Event event) throws Throwable {
                         ProcessControlException.throwReturnImmediately(null);
@@ -32,4 +32,6 @@ public class SandboxfixTest implements Module{
                 Event.Type.THROWS
         );
     }
+
+
 }
