@@ -40,7 +40,7 @@ public class SampleTransformer implements ClassFileTransformer {
                 transformed = cl.toBytecode();
             }
         } catch (Exception e) {
-            System.err.println("Could not transform io.fengfu.learning.instrument  " + className + ",  exception : " + e.getMessage());
+            System.err.println("Could not transform instrument  " + className + ",  exception : " + e.getMessage());
         } finally {
             if (cl != null) {
                 cl.detach();
@@ -54,6 +54,9 @@ public class SampleTransformer implements ClassFileTransformer {
 
         method.instrument(new ExprEditor() {
             public void edit(MethodCall m) throws CannotCompileException {
+                /**
+                 * wiki:http://blog.csdn.net/u011425751/article/details/51917895
+                 */
                 m.replace("{ long stime = System.currentTimeMillis(); $_ = $proceed($$); System.out.println(\""
                                 + m.getClassName()+"."+m.getMethodName()
                                 + ":\"+(System.currentTimeMillis()-stime));}");
