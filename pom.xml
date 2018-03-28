@@ -12,6 +12,8 @@
         <module>clhlock</module>
         <module>sandboxfix</module>
         <module>instrumentation</module>
+        <module>weakReference</module>
+        <module>proxy</module>
     </modules>
 
     <properties>

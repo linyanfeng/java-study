@@ -6,21 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="clhlock" />
+        <module name="clh-lock" />
         <module name="instrumentation" />
-        <module name="java-cache-line" />
-        <module name="java-class-loader" />
+        <module name="proxy" />
         <module name="sandbox-fix" />
+        <module name="weakReference" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
-      <module name="clhlock" target="1.5" />
+    <bytecodeTargetLevel>
+      <module name="clh-lock" target="1.5" />
       <module name="instrumentation" target="1.7" />
-      <module name="java-cache-line" target="1.5" />
-      <module name="java-class-loader" target="1.5" />
       <module name="java-study" target="1.5" />
-      <module name="sandbox" target="1.5" />
+      <module name="proxy" target="1.5" />
       <module name="sandbox-fix" target="1.5" />
+      <module name="weakReference" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

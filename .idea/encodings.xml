@@ -2,9 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/clhlock" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/demo" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javacacheline" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javaclassloader" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/sandbox" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/proxy" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/weakReference" charset="UTF-8" />
   </component>
 </project>
