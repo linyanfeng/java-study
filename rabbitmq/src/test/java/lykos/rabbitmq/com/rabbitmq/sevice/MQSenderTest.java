@@ -23,6 +23,10 @@ public class MQSenderTest {
     private ServiceWithTransaction serviceWithTransaction;
 
     @Test
+    public void MQsender(){
+        
+    }
+    @Test
     public void send() throws Exception {
         try {
             serviceWithTransaction.sendWithTransaction( MQConstant.HELLO_QUEUE_NAME,"this is a delay msg",1);

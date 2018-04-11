@@ -6,11 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.core.MessagePostProcessor;
-import org.springframework.lang.Nullable;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.TransactionStatus;
-import org.springframework.transaction.support.TransactionCallback;
-import org.springframework.transaction.support.TransactionTemplate;
 
 import javax.annotation.Resource;
 import java.io.Serializable;
@@ -20,25 +17,15 @@ import java.io.Serializable;
  * @version 2018/4/3 17:29
  */
 @Service
-public class MQSender {
+public class MQSender implements InitializingBean{
     private Logger logger = LoggerFactory.getLogger(MQSender.class);
 
-//    @Resource
-    private TransactionTemplate transactionTemplate;
     @Resource
     private AmqpTemplate amqpTemplate;
 
     public void send(String queueName, String msg) {
         logger.info("begin to send to queue[{}] msg:{}", queueName, msg);
-//        transactionTemplate.execute(new TransactionCallback<String>() {
-//            @Nullable
-//            @Override
-//            public String doInTransaction(TransactionStatus transactionStatus) {
-//                amqpTemplate.convertAndSend(queueName,content);
-//                return "";
-//            }
-//        });
-        amqpTemplate.convertAndSend(MQConstant.DEFAULT_EXCHANGE,queueName, msg);
+        amqpTemplate.convertAndSend(MQConstant.DEFAULT_EXCHANGE, queueName, msg);
     }
 
     /**
@@ -60,19 +47,11 @@ public class MQSender {
         amqpTemplate.convertAndSend(MQConstant.DEFAULT_EXCHANGE, MQConstant.DEFAULT_DEAD_LETTER_QUEUE_NAME, JsonUtil
                 .toJsonString(dlxMessage), processor);
 
-//        transactionTemplate.execute(new TransactionCallback<String>() {
-//            @Nullable
-//            @Override
-//            public String doInTransaction(TransactionStatus transactionStatus) {
-//                if(transactionStatus.isCompleted()){
-//                    logger.info("tr is completed...");
-//                    amqpTemplate.convertAndSend(MQConstant.DEFAULT_EXCHANGE,MQConstant.DEFAULT_DEAD_LETTER_QUEUE_NAME,JsonUtil
-//                            .toJsonString(dlxMessage), processor);
-//                }
-//                return "";
-//            }
-//        });
+    }
 
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        logger.info("InitializingBean...");
     }
 
     public static class DLXMessage implements Serializable {
