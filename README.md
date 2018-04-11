@@ -28,3 +28,24 @@ Hello World!
 java.io.PrintStream.println:0
 lykos.study.com.instrument.SampleApp.test:3006
 ```
+### rabbitmq
+   * 延迟队列测试
+   
+   ```
+   运行MQSenderTest
+   ```
+   * 绑定本地事务
+   ```
+   1、
+       template.setChannelTransacted(true);
+   2、
+       @Bean
+       public RabbitTransactionManager rabbitTransactionManager(ConnectionFactory connectionFactory) {
+           return new RabbitTransactionManager(connectionFactory);
+       }
+   3、
+       @Transactional
+       public void sendWithTransaction(String queue, String msg, long time) {
+       ...
+       }
+   ```
